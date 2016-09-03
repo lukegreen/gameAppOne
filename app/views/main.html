@@ -1,35 +1,36 @@
 <div class="jumbotron" ng-controller="MainCtrl">
 
     <div>
-      <h2>Character name</h2>
+      <h2 ng-bind="characterName"></h2>
+      <h3 ng-bind="characterType"></h3>
         <ul class="list-group">
-          <li class="list-group-item">
-            <span class="badge">14</span>
+          <li class="list-group-item" ng-class="{active: activeItem === 'strength'}" ng-click="activeItem = 'strength' ; testScript($event)">
+            <span class="badge" ng-bind="strength"></span>
             Strength
           </li>
-          <li class="list-group-item">
-            <span class="badge">7</span>
+          <li class="list-group-item" ng-class="{active: activeItem === 'intelligence'}" ng-click="activeItem = 'intelligence' ; testScript($event)">
+            <span class="badge" ng-bind="intelligence"></span>
             Intelligence
           </li>
-          <li class="list-group-item">
-            <span class="badge">11</span>
+          <li class="list-group-item" ng-class="{active: activeItem === 'speed'}" ng-click="activeItem = 'speed' ; testScript($event)">
+            <span class="badge" ng-bind="speed"></span>
             Speed
           </li>
-          <li class="list-group-item">
-            <span class="badge">10</span>
+          <li class="list-group-item" ng-class="{active: activeItem === 'dexterity'}" ng-click="activeItem = 'dexterity' ; testScript($event)">
+            <span class="badge" ng-bind="dexterity"></span>
             Dexterity
           </li>
-          <li class="list-group-item">
-            <span class="badge">3</span>
+          <li class="list-group-item" ng-class="{active: activeItem === 'magic'}" ng-click="activeItem = 'magic' ; testScript($event)">
+            <span class="badge" ng-bind="magic"></span>
             Magic
           </li>
         </ul>
     </div>
 
-    <div id="attributeButtons">
+    <div id="attributeButton">
       <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">+</button>
-        <button type="button" class="btn btn-default">-</button>
+        <button type="button" class="btn btn-default" ng-click="addOne(activeItem)">+</button>
+        <button type="button" class="btn btn-default" ng-click="subtractOne(activeItem)">-</button>
     </div>
 
 </div>
