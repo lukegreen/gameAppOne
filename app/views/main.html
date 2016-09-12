@@ -4,25 +4,29 @@
       <h2 ng-bind="characterName"></h2>
       <h3 ng-bind="characterType"></h3>
         <ul class="list-group">
-          <li class="list-group-item" ng-class="{active: activeItem === 'strength'}" ng-click="activeItem = 'strength' ; testScript($event)">
-            <span class="badge" ng-bind="strength"></span>
-            Strength
+          <li class="list-group-item" ng-class="{active: activeItem === 'health'}" ng-click="activeItem = 'health' ; setActiveItem($event)">
+            <span class="badge" ng-bind="health"></span>
+            Health
           </li>
-          <li class="list-group-item" ng-class="{active: activeItem === 'intelligence'}" ng-click="activeItem = 'intelligence' ; testScript($event)">
-            <span class="badge" ng-bind="intelligence"></span>
-            Intelligence
+          <li class="list-group-item" ng-class="{active: activeItem === 'attack'}" ng-click="activeItem = 'attack' ; setActiveItem($event)">
+            <span class="badge" ng-bind="attack"></span>
+            Attack
           </li>
-          <li class="list-group-item" ng-class="{active: activeItem === 'speed'}" ng-click="activeItem = 'speed' ; testScript($event)">
-            <span class="badge" ng-bind="speed"></span>
-            Speed
+          <li class="list-group-item" ng-class="{active: activeItem === 'defense'}" ng-click="activeItem = 'defense' ; setActiveItem($event)">
+            <span class="badge" ng-bind="defense"></span>
+            Defense
           </li>
-          <li class="list-group-item" ng-class="{active: activeItem === 'dexterity'}" ng-click="activeItem = 'dexterity' ; testScript($event)">
-            <span class="badge" ng-bind="dexterity"></span>
-            Dexterity
+          <li class="list-group-item" ng-class="{active: activeItem === 'agility'}" ng-click="activeItem = 'agility' ; setActiveItem($event)">
+            <span class="badge" ng-bind="agility"></span>
+            Agility
           </li>
-          <li class="list-group-item" ng-class="{active: activeItem === 'magic'}" ng-click="activeItem = 'magic' ; testScript($event)">
-            <span class="badge" ng-bind="magic"></span>
-            Magic
+          <li class="list-group-item" ng-class="{active: activeItem === 'craft'}" ng-click="activeItem = 'craft' ; setActiveItem($event)">
+            <span class="badge" ng-bind="craft"></span>
+            Craft
+          </li>
+          <li class="list-group-item" ng-class="{active: activeItem === 'morale'}" ng-click="activeItem = 'morale' ; setActiveItem($event)">
+            <span class="badge" ng-bind="morale"></span>
+            Morale
           </li>
         </ul>
     </div>
